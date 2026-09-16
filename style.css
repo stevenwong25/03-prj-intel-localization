@@ -1,0 +1,290 @@
+html {
+	scroll-behavior: smooth;
+}
+
+/* Remove the browser's default spacing around the page. */
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+  background-color: #f5f7f9;
+}
+
+/* Create the hero area with a light blue to dark blue gradient. */
+header {
+	min-height: 70vh;
+	padding: 60px 24px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	background: linear-gradient(90deg, #3d9bd1, #03366d);
+}
+
+/* Keep the hero content easy to read on wide screens. */
+header > div {
+	max-width: 550px;
+}
+
+/* Resize the Intel logo and keep it above the text. */
+header img {
+	width: 200px;
+	height: auto;
+	margin-bottom: 28px;
+}
+
+header h1 {
+	margin: 0 0 18px;
+	font-size: 48px;
+	text-transform: uppercase;
+}
+
+header h1::after {
+	content: "";
+	display: block;
+	width: 48px;
+	height: 3px;
+	margin: 16px auto 0;
+	background-color: white;
+}
+
+header p {
+	margin: 0;
+	font-size: 20px;
+	line-height: 1.6;
+}
+
+/* Stack the heading above the horizontally scrolling card row. */
+section {
+	padding: 48px 24px;
+}
+
+/* Center the timeline heading above all of the cards. */
+.timeline-heading {
+	margin: 0;
+	font-size: 32px;
+	text-align: center;
+}
+
+.timeline-heading::after {
+	content: "";
+	display: block;
+	width: 90px;
+	height: 3px;
+	margin: 12px auto 0;
+	background-color: #1882d7;
+}
+
+/* Keep the cards in one row and allow horizontal scrolling. */
+.timeline-cards {
+	display: flex;
+	gap: 24px;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	padding: 32px 4px 16px;
+  margin: 0 100px;
+}
+
+/* Give every timeline card the same dimensions and spacing. */
+.timeline-cards > div {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	scroll-snap-align: start;
+	width: calc((100% - 72px) / 4);
+	height: auto;
+	aspect-ratio: 1 / 1;
+	flex: 0 0 calc((100% - 72px) / 4);
+	padding: 16px;
+	overflow: hidden;
+	border: 1px solid #d7e3ee;
+	background-color: #f5f9fc;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-cards > div:hover, 
+.timeline-cards > div:focus {
+	transform: translateY(-6px) scale(1.02);
+	box-shadow: 0 10px 20px rgba(3, 54, 109, 0.18);
+}
+
+section h2,
+section h3 {
+	margin-top: 0;
+}
+
+.timeline-cards h2{
+	color: #1769aa;
+}
+
+.timeline-cards img {
+	width: 100%;
+	flex: 1;
+	min-height: 0;
+	margin-top: 12px;
+	object-fit: cover;
+}
+
+section p {
+	line-height: 1.5;
+}
+
+/* Keep the detailed text hidden until a card is hovered. */
+.timeline-cards p {
+	position: absolute;
+	inset: 0;
+	height: 100%;
+	max-height: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 14px 20px;
+	overflow-y: auto;
+	background-color: rgba(32, 105, 159, 0.8);
+  color: white;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	pointer-events: none;
+}
+
+.timeline-cards > div:hover p,
+.timeline-cards > div:focus p {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* Center the instruction below the timeline. */
+body > p {
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+.back-to-top {
+	display: none;
+}
+
+/* Adjust the hero and timeline for tablets. */
+@media (max-width: 1024px) {
+	header {
+		min-height: 65vh;
+		padding: 48px 24px;
+	}
+
+	header h1 {
+		font-size: 42px;
+	}
+
+	header p {
+		font-size: 18px;
+	}
+
+	.timeline-cards {
+		flex-direction: column;
+		align-items: center;
+		margin: 0 24px;
+		gap: 16px;
+		overflow-x: visible;
+	}
+
+	.timeline-cards > div {
+		width: min(100%, 700px);
+		aspect-ratio: 16 / 10;
+		flex-basis: auto;
+	}
+
+	.timeline-cards img {
+		object-fit: contain;
+    object-position: left center;
+	}
+
+	.timeline-cards h2 {
+		font-size: 28px;
+	}
+
+	.timeline-cards h3 {
+		font-size: 24px;
+	}
+
+	.timeline-cards p {
+		font-size: 26px;
+	}
+
+	.timeline-heading {
+		font-size: 30px;
+	}
+
+	body > p {
+		display: none;
+	}
+
+	.back-to-top {
+		display: block;
+		width: fit-content;
+		margin: 24px auto 40px;
+		padding: 10px 18px;
+		border-radius: 4px;
+		color: white;
+		background-color: #1769aa;
+		text-decoration: none;
+	}
+
+	.back-to-top:hover,
+	.back-to-top:focus {
+		background-color: #03366d;
+	}
+}
+
+/* Make the layout comfortable on phones. */
+@media (max-width: 600px) {
+	header {
+		min-height: 75vh;
+		padding: 40px 18px;
+	}
+
+	header img {
+		width: 160px;
+	}
+
+	header h1 {
+		font-size: 34px;
+	}
+
+	header p {
+		font-size: 16px;
+	}
+
+	section {
+		padding: 36px 12px;
+	}
+
+	.timeline-heading {
+		font-size: 26px;
+	}
+
+	.timeline-cards {
+		margin: 0;
+		gap: 16px;
+		padding: 24px 4px 12px;
+	}
+
+	.timeline-cards > div {
+		width: 100%;
+		flex-basis: auto;
+		padding: 14px;
+	}
+
+	.timeline-cards h2 {
+		font-size: 24px;
+    margin-bottom: 6px;
+	}
+
+	.timeline-cards h3 {
+		font-size: 20px;
+    margin-bottom: 0;
+	}
+
+	.timeline-cards p {
+		font-size: 18px;
+	}
+}
