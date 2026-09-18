@@ -9,6 +9,16 @@ body {
   background-color: #f5f7f9;
 }
 
+.site-footer {
+	color: #03366d;
+	background-color: #f5f9fc;
+	border-top: 1px solid #d7e3ee;
+}
+
+.site-footer p {
+	margin: 0;
+}
+
 /* Create the hero area with a light blue to dark blue gradient. */
 header {
 	min-height: 70vh;
@@ -155,6 +165,21 @@ section p {
   border-color: #1769aa;
 }
 
+.subscription-form {
+	max-width: 600px;
+}
+
+.subscription-form .btn-primary {
+  background-color: #3091d4;
+  border-color: #3091d4;
+}
+
+.subscription-form .btn-primary:hover,
+.subscription-form .btn-primary:focus {
+  background-color: #1769aa;
+  border-color: #1769aa;
+}
+
 /* Keep the detailed text hidden until a card is hovered. */
 .timeline-cards p {
 	position: absolute;
@@ -236,26 +261,6 @@ body > p {
 
 	.timeline-heading {
 		font-size: 30px;
-	}
-
-	body > p {
-		display: none;
-	}
-
-	.back-to-top {
-		display: block;
-		width: fit-content;
-		margin: 24px auto 40px;
-		padding: 10px 18px;
-		border-radius: 4px;
-		color: white;
-		background-color: #1769aa;
-		text-decoration: none;
-	}
-
-	.back-to-top:hover,
-	.back-to-top:focus {
-		background-color: #03366d;
 	}
 }
 
