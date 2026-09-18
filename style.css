@@ -135,6 +135,15 @@ section p {
 	background-color: #f5f9fc;
 }
 
+.three-column-section h2 {
+	font-size: 28px;
+}
+
+.three-column-section p {
+	font-size: 18px;
+	line-height: 1.6;
+}
+
 .three-column-section .btn-primary {
 	background-color: #3091d4;
 	border-color: #3091d4;
