@@ -131,6 +131,21 @@ section p {
 	line-height: 1.5;
 }
 
+.three-column-section {
+	background-color: #f5f9fc;
+}
+
+.three-column-section .btn-primary {
+	background-color: #3091d4;
+	border-color: #3091d4;
+}
+
+.three-column-section .btn-primary:hover,
+.three-column-section .btn-primary:focus {
+  background-color: #1769aa;
+  border-color: #1769aa;
+}
+
 /* Keep the detailed text hidden until a card is hovered. */
 .timeline-cards p {
 	position: absolute;
