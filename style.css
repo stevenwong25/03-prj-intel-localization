@@ -169,6 +169,11 @@ section p {
 	max-width: 600px;
 }
 
+.subscription-form .form-control:user-invalid {
+	border-color: #dc3545;
+  border-width: 1.5px;
+}
+
 .subscription-form .btn-primary {
   background-color: #3091d4;
   border-color: #3091d4;
