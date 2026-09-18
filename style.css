@@ -184,14 +184,16 @@ html.translated-rtl .three-column-section .btn-primary {
 }
 
 .three-column-section .btn-primary {
-	background-color: #3091d4;
-	border-color: #3091d4;
+	color: white;
+	background-color: #1769aa;
+	border-color: #1769aa;
 }
 
 .three-column-section .btn-primary:hover,
 .three-column-section .btn-primary:focus {
-  background-color: #1769aa;
-  border-color: #1769aa;
+	color: white;
+	background-color: #03366d;
+	border-color: #03366d;
 }
 
 .subscription-form {
@@ -221,14 +223,16 @@ html.translated-rtl .subscription-form .form-control {
 }
 
 .subscription-form .btn-primary {
-  background-color: #3091d4;
-  border-color: #3091d4;
+	color: white;
+	background-color: #1769aa;
+	border-color: #1769aa;
 }
 
 .subscription-form .btn-primary:hover,
 .subscription-form .btn-primary:focus {
-  background-color: #1769aa;
-  border-color: #1769aa;
+	color: white;
+	background-color: #03366d;
+	border-color: #03366d;
 }
 
 /* Keep the detailed text hidden until a card is hovered. */
