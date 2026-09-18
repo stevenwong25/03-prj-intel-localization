@@ -9,6 +9,12 @@ body {
   background-color: #f5f7f9;
 }
 
+html[dir="rtl"] body,
+html.translated-rtl body {
+	direction: rtl;
+	text-align: right;
+}
+
 .site-footer {
 	color: #03366d;
 	background-color: #f5f9fc;
@@ -30,6 +36,11 @@ header {
 	text-align: center;
 	color: white;
 	background: linear-gradient(90deg, #3d9bd1, #03366d);
+}
+
+html[dir="rtl"] header,
+html.translated-rtl header {
+	background: linear-gradient(270deg, #3d9bd1, #03366d);
 }
 
 /* Keep the hero content easy to read on wide screens. */
@@ -96,6 +107,12 @@ section {
   margin: 0 100px;
 }
 
+html[dir="rtl"] .timeline-cards,
+html.translated-rtl .timeline-cards {
+	direction: rtl;
+	flex-direction: row;
+}
+
 /* Give every timeline card the same dimensions and spacing. */
 .timeline-cards > div {
 	box-sizing: border-box;
@@ -145,6 +162,18 @@ section p {
 	background-color: #f5f9fc;
 }
 
+html[dir="rtl"] .three-column-section .row,
+html.translated-rtl .three-column-section .row {
+	direction: rtl;
+}
+
+html.translated-rtl .three-column-section .btn-primary {
+	display: block;
+	width: fit-content;
+	margin-inline-start: 0;
+	margin-inline-end: auto;
+}
+
 .three-column-section h2 {
 	font-size: 28px;
 }
@@ -167,6 +196,23 @@ section p {
 
 .subscription-form {
 	max-width: 600px;
+}
+
+.subscription-form .input-group .form-control,
+.subscription-form .input-group .btn {
+	border-radius: 0;
+}
+
+html[dir="rtl"] .subscription-form .input-group,
+html.translated-rtl .subscription-form .input-group {
+	direction: rtl;
+	flex-direction: row;
+}
+
+html[dir="rtl"] .subscription-form .form-control,
+html.translated-rtl .subscription-form .form-control {
+	direction: rtl;
+	text-align: right;
 }
 
 .subscription-form .form-control:user-invalid {
